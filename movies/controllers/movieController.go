@@ -67,8 +67,10 @@ func DeleteMovie(w http.ResponseWriter, r *http.Request){
 	for index,movie := range GlobalMovieResource.Data{
 		if movie.Id == id {
 			GlobalMovieResource.Data = append(GlobalMovieResource.Data[:index],GlobalMovieResource.Data[index+1:]...)
+			w.WriteHeader(http.StatusNoContent)
+			return
 		}
 	}
-	w.WriteHeader(http.StatusNoContent)
+	common.DisplayError(w,errors.New("error in getting movie"),"movie not present with given id",500)
 }
 

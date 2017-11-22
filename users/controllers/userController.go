@@ -49,9 +49,11 @@ func DeleteUser(w http.ResponseWriter, r *http.Request){
 	for index,user := range GlobalUserResource.Data{
 		if user.Id == id {
 			GlobalUserResource.Data = append(GlobalUserResource.Data[:index],GlobalUserResource.Data[index+1:]...)
+			w.WriteHeader(http.StatusNoContent)
+			return
 		}
 	}
-	w.WriteHeader(http.StatusNoContent)
+	common.DisplayError(w,errors.New("error in getting movie"),"movie not present with given id",500)
 }
 
 func GetUserBooking(w http.ResponseWriter, r *http.Request){

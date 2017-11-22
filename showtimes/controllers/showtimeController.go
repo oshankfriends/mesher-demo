@@ -67,9 +67,11 @@ func DeleteShowTime(w http.ResponseWriter, r *http.Request){
 	for index,showtime := range GlobalShowTimeResource.Data{
 		if showtime.Id == id {
 			GlobalShowTimeResource.Data = append(GlobalShowTimeResource.Data[:index],GlobalShowTimeResource.Data[index+1:]...)
+			w.WriteHeader(http.StatusNoContent)
+			return
 		}
 	}
-	w.WriteHeader(http.StatusNoContent)
+	common.DisplayError(w,errors.New("error in getting show"),"Show not present with given showId",500)
 }
 
 func GetShowTimeById(w http.ResponseWriter, r *http.Request){
