@@ -3,7 +3,7 @@ Mesher demo is an example project which demonstrates the use of microservices fo
 * Movie Service: Provides information like movie ratings, title, etc.
 * Show Times Service: Provides show times information.
 * Booking Service: Provides booking information.
-* Users Service: Provides movie suggestions for users by communicating with other services.
+* Users Service: Provides booking information from booking service for users and movie rating etc. from the Movie service by communicating with other services.
 
 #### Requirements:
 1.	Golang
