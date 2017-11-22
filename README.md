@@ -130,8 +130,18 @@ cd mesher-demo/showtimes
 docker build –t showtimes:latest .  
 cd mesher-demo/users  
 docker build –t users:latest .  
-* Running services in a docker container  
+
+### Run
+* **In a docker container**  
 example :- docker run -d --net=host booking:latest  
+* **Using Binaries**  
+    In order to build the services locally make sure the repository directory located in correct $GOPATH  
+    For Example :-   
+    directory : $GOPATH/src/github.com/oshankfriends/mesher-demo/booking  
+    cd $GOPATH/src/github.com/oshankfriends/mesher-demo/booking  
+    go build -o booking  
+    The result is a binary *booking* in current directory  
+    ./booking
 	
 
  
