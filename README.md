@@ -121,7 +121,7 @@ It will communicates with other 3 microservices to retrieve booking and movie in
 ```
 
 ### 2.	Create Docker Image 
-go get github.com/oshankfriends/mesher-demo  
+git clone https://github.com/oshankfriends/mesher-demo.git  
 cd  mesher-demo/booking  
 docker build –t booking:latest .  
 cd mesher-demo/movies  
