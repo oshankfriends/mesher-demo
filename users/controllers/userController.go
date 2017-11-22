@@ -53,7 +53,7 @@ func DeleteUser(w http.ResponseWriter, r *http.Request){
 			return
 		}
 	}
-	common.DisplayError(w,errors.New("error in getting movie"),"movie not present with given id",500)
+	common.DisplayError(w,errors.New("error in getting user"),"user not present with given id",500)
 }
 
 func GetUserBooking(w http.ResponseWriter, r *http.Request){
