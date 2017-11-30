@@ -4,5 +4,5 @@ ADD . /go/src/github.com/oshankfriends/mesher-demo/users
 WORKDIR /go/src/github.com/oshankfriends/mesher-demo/users
 RUN go install github.com/oshankfriends/mesher-demo/users
 ENTRYPOINT /go/bin/users
-# Service listens on port 5003.
-EXPOSE 5003
+# Service listens on port 5000.
+EXPOSE 5000
