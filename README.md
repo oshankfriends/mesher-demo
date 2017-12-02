@@ -34,10 +34,10 @@ To look up Booking information of all users.Returns a list of booking informatio
 ```
 {"data":[{"userid":"844845885","showtimeid":"4376498348938","movies":["8y8y888y808","3y8473743740973"]}]}
 ```
-*	POST /booking
+*	POST /bookings
 Create a new booking information
 ```
-Curl  -X POST localhost:5003/booking –d ’{"data" : {"userid" :"844845885","showtimeid":"4376498348938","movies": ["8y8y888y808","3y8473743740973"]}} ‘
+Curl  -X POST localhost:5003/bookings –d ’{"data" : {"userid" :"844845885","showtimeid":"4376498348938","movies": ["8y8y888y808","3y8473743740973"]}} ‘
 ```
 * 	GET /bookings/{userid}
 
