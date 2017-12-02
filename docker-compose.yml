@@ -1,0 +1,23 @@
+version: '2'
+services:
+  Booking:
+    image: booking:latest
+    ports:
+      - 5003:5003
+  Movies:
+    image: movies:latest
+    ports:
+      - 5001:5001
+  Showtimes:
+    image: showtimes:latest
+    ports:
+      - 5002:5002
+  Users:
+    image: users:latest
+    ports:
+      - 5000:5000
+    links:
+      - Movies
+      - Showtimes
+      - Booking
+

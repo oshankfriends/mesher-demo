@@ -1,6 +1,6 @@
 {
   "server":        "0.0.0.0:5000",
-  "bookingserver": "0.0.0.0:5003",
-  "movieserver":   "0.0.0.0:5001",
-  "showtimeserver": "0.0.0.0:5002"
+  "bookingserver": "Booking:5003",
+  "movieserver":   "Movies:5001",
+  "showtimeserver": "Showtimes:5002"
 }
